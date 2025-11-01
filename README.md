@@ -1,73 +1,88 @@
-# React + TypeScript + Vite
+# 🧩 Front-End Developer Assessment Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+This project is a **Kanban-style To-Do List Dashboard** built using **React + Vite**.  
+It includes four interactive columns — **Backlog**, **In Progress**, **Review**, and **Done** — and supports **CRUD operations**, **drag & drop**, **pagination/infinite scroll**, **search**, and **React Query caching**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A **Bonus jQuery Task** is also implemented to demonstrate DOM manipulation and animations using pure jQuery.
 
-## React Compiler
+---
+## 🌐 Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Deployed via Vercel
 
-## Expanding the ESLint configuration
+🔗 Live Demo (Main App): https://jira-clone-delta-kohl.vercel.app/
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔗 Bonus Task: https://jira-clone-delta-kohl.vercel.app/jqueryTask.html
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🔗 GitHub Repository: https://github.com/mohamed-h-rabie/jira-board-clone
+---
+## 🧠 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🖥️ Main Task — Kanban Board
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Display tasks in **4 columns**: Backlog, In Progress, Review, and Done  
+✅ **Create, Update, and Delete** tasks  
+✅ **Drag and Drop** tasks between columns (smooth Jira-like animation)  
+✅ **Pagination** or **Infinite Scroll** in each column  
+✅ **Search** tasks by title or description  
+✅ **React Query Caching** for optimized API requests  
+✅ Fully **responsive** and **clean UI**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🧩 Bonus Task — jQuery Dynamic List
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Add items dynamically using an input and button  
+- Show an **error message** if the input is empty (auto-hides after 2 seconds)  
+- Append new items to the list  
+- Each item has a **Delete button** with a fade-out animation  
+
+---
+
+## ⚙️ Tech Stack
+
+| Category | Tool |
+|-----------|------|
+| **Framework** | React (Vite) |
+| **State Management** | Zustand |
+| **Data Fetching** | React Query |
+| **UI Library** | Material UI |
+| **API** | json-server |
+| **Bonus Task** | jQuery |
+| **Deployment** | Vercel |
+
+---
+
+## ⚡ Setup Instructions
+
+### 🧱 Prerequisites
+
+Make sure you have installed:
+
+- Node.js (v18 or higher)
+- npm, yarn, or pnpm
+- json-server (for mock API)
+
+---
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/kanban-dashboard.git
+cd kanban-dashboard
+
+then
+npm install
+# or
+pnpm install
+# or
+yarn install
+
+
+then Run server 
+npx json-server --watch db.json --port 4000
+then run client 
+npm run dev
+
