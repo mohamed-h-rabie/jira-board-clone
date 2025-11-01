@@ -58,7 +58,6 @@ const UpdateTaskModal = ({
       });
     }
   }, [task]);
-  console.log(formData);
 
   const isFormValid = formData.title.trim() && formData.description.trim();
 

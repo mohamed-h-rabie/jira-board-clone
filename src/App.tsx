@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Board from "./board/board";
+import Board from "./components/board/board";
 import {
   Box,
   TextField,
@@ -8,10 +8,10 @@ import {
   Container,
 } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
-import AddTaskModel from "./components/AddTaskModel";
+import AddTaskModel from "./components/Models/AddTaskModel";
 import usePostTask from "./hooks/usePostTask";
+import { useTaskStore } from "./store/taskStore";
 
-// Debounce hook - Fixed to use useEffect instead of useMemo
 function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
@@ -29,15 +29,27 @@ function useDebounce<T>(value: T, delay: number): T {
 }
 
 export default function App() {
-  const [searchQuery, setSearchQuery] = useState("");
   const [openModel, setOpenModel] = useState(false);
-  const handleOpen = () => setOpenModel(true);
-  const handleClose = () => setOpenModel(false);
+
+  // Use Zustand store
+  const searchQuery = useTaskStore((state) => state.searchQuery);
+  const setSearchQuery = useTaskStore((state) => state.setSearchQuery);
+  const setDebouncedSearchQuery = useTaskStore(
+    (state) => state.setDebouncedSearchQuery
+  );
+
   const { mutate: postTask } = usePostTask();
   const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
+  // Update debounced search query in store
+  useEffect(() => {
+    setDebouncedSearchQuery(debouncedSearchQuery);
+  }, [debouncedSearchQuery, setDebouncedSearchQuery]);
+
+  const handleOpen = () => setOpenModel(true);
+  const handleClose = () => setOpenModel(false);
+
   const handleModalSubmit = (data: any) => {
-    console.log("Submitted data:", data);
     postTask(data);
   };
 
@@ -74,7 +86,7 @@ export default function App() {
                 }}
               />
               <Button
-                onClick={() => handleOpen()}
+                onClick={handleOpen}
                 variant="contained"
                 size="large"
                 sx={{
@@ -96,12 +108,12 @@ export default function App() {
           </Box>
         </Container>
 
-        <Board searchQuery={debouncedSearchQuery} />
+        <Board />
       </Box>
 
       <AddTaskModel
         open={openModel}
-        onClose={() => handleClose()}
+        onClose={handleClose}
         handleModalSubmit={handleModalSubmit}
       />
     </>

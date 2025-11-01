@@ -1,13 +1,13 @@
 import { Draggable } from "@hello-pangea/dnd";
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import UpdateTaskModal from "../components/UpdateTaskModal";
+import UpdateTaskModal from "../Models/UpdateTaskModal";
 import { useCallback, useState } from "react";
 import { Delete, Edit } from "@mui/icons-material";
-import useUpadateTask from "../hooks/useUpdateTask";
-import DeleteTaskModal from "../components/DeleteTaskModal";
-import useDeleteTask from "../hooks/useDeleteTask";
+import useUpadateTask from "../../hooks/useUpdateTask";
+import DeleteTaskModal from "../Models/DeleteTaskModal";
+import useDeleteTask from "../../hooks/useDeleteTask";
 
-interface QuoteItemProps {
+interface TaskCardProps {
   task: {
     id: string;
     title: string;
@@ -25,7 +25,7 @@ const getHeaderColor = (header: string) => {
   };
   return colors[header] || "#F5F5F5"; // Default gray
 };
-export default function QuoteItem({ task, index }: QuoteItemProps) {
+export default function TaskCard({ task, index }: TaskCardProps) {
   const [openUpdateModel, setOpenUpdateModel] = useState(false);
   const [openDeleteModel, setOpenDeleteModel] = useState(false);
   const handleOpen = () => setOpenUpdateModel(true);

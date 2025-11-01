@@ -1,5 +1,5 @@
 import { Droppable } from "@hello-pangea/dnd";
-import QuoteItem from "./quote-item";
+import TaskCard from "./TaskCard";
 import { Typography, Box } from "@mui/material";
 import { useRef, useEffect } from "react";
 
@@ -126,7 +126,7 @@ export default function Column({
               }}
             >
               {items?.map((quote: any, index: number) => (
-                <QuoteItem key={quote.id} task={quote} index={index} />
+                <TaskCard key={quote.id} task={quote} index={index} />
               ))}
 
               {provided.placeholder}

@@ -7,10 +7,7 @@ export const fetchTasks = async (
   pageParam = 1,
   searchQuery: string
 ) => {
-  console.log(searchQuery,'sffffffffffff');
-  
   const res = await axios.get(
-    // `http://localhost:4000/tasks?q=${searchQuery}&column=${query}&_page=${pageParam}&_limit=${LIMIT}`
     `http://localhost:4000/tasks?column=${query}&_page=${pageParam}&_limit=${LIMIT}&_sort=position&_order=asc${
       searchQuery.length > 0 ? `&q=${searchQuery}` : ""
     }`
@@ -25,11 +22,9 @@ export const fetchTasks = async (
 
 const useGetTasks = (query: string, searchQuery: string) => {
   return useInfiniteQuery({
-    queryKey: ["tasks", query ,searchQuery],
+    queryKey: ["tasks", query, searchQuery],
     queryFn: ({ pageParam = 1 }) => fetchTasks(query, pageParam, searchQuery),
     getNextPageParam: (lastPage) => {
-      // console.log(lastPage, "lastPage");
-
       return lastPage.hasMore ? lastPage.nextPage : undefined;
     },
     initialPageParam: 1,
