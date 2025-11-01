@@ -1,0 +1,112 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design homepage",
+      "description": "Include hero section and responsive layout",
+      "column": "review"
+    },
+    {
+      "id": 2,
+      "title": "Set up project structure",
+      "description": "Initialize repository and folder organization",
+      "column": "done"
+    },
+    {
+      "id": 3,
+      "title": "Plan database schema",
+      "description": "Define tables, relations, and indexes",
+      "column": "inProgress"
+    },
+    {
+      "id": 4,
+      "title": "Create color palette",
+      "description": "Establish primary and secondary theme colors",
+      "column": "review"
+    },
+    {
+      "id": 6,
+      "title": "Define API contract",
+      "description": "List all endpoints and expected responses",
+      "column": "backlog"
+    },
+    {
+      "id": 7,
+      "title": "Prepare design system",
+      "description": "Buttons, inputs, modals, and typography rules",
+      "column": "backlog"
+    },
+    {
+      "id": 12,
+      "title": "Build user dashboard",
+      "description": "Develop UI components for dashboard overview",
+      "column": "backlog"
+    },
+    {
+      "id": 13,
+      "title": "Connect to API gateway",
+      "description": "Integrate frontend with backend endpoints",
+      "column": "review"
+    },
+    {
+      "id": 18,
+      "title": "Integrate image uploader",
+      "description": "Support profile and post image uploads",
+      "column": "inProgress"
+    },
+    {
+      "id": 21,
+      "title": "Code review: API endpoints",
+      "description": "Verify and optimize REST API logic",
+      "column": "done"
+    },
+    {
+      "id": 26,
+      "title": "UI/UX consistency check",
+      "description": "Confirm design alignment with style guide",
+      "column": "inProgress"
+    },
+    {
+      "id": 27,
+      "title": "Performance profiling",
+      "description": "Analyze render times and memory usage",
+      "column": "done"
+    },
+    {
+      "id": 31,
+      "title": "Fix mobile navigation bug",
+      "description": "Resolve issue with collapsed menu on iOS",
+      "column": "done"
+    },
+    {
+      "id": 32,
+      "title": "Deploy to staging",
+      "description": "Push latest changes for QA verification",
+      "column": "done"
+    },
+    {
+      "id": 33,
+      "title": "Finalize landing page design",
+      "description": "Complete hero and features section",
+      "column": "done"
+    },
+    {
+      "id": 37,
+      "title": "Clean up old assets",
+      "description": "Remove unused images and components",
+      "column": "done"
+    },
+    {
+      "id": 39,
+      "title": "Tag production release",
+      "description": "Mark stable version and create changelog",
+      "column": "backlog"
+    },
+    {
+      "id": 40,
+      "title": "Post-deployment testing",
+      "description": "Ensure everything runs correctly in production",
+      "column": "done"
+    }
+  ]
+}
