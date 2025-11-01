@@ -8,7 +8,16 @@ It includes four interactive columns — **Backlog**, **In Progress**, **Review*
 A **Bonus jQuery Task** is also implemented to demonstrate DOM manipulation and animations using pure jQuery.
 
 ---
+## 🌐 Deployment
 
+Deployed via Vercel
+
+🔗 Live Demo (Main App): https://jira-clone-delta-kohl.vercel.app/
+
+🔗 Bonus Task: https://jira-clone-delta-kohl.vercel.app/jqueryTask.html
+
+🔗 GitHub Repository: https://github.com/your-username/kanban-dashboard
+---
 ## 🧠 Features
 
 ### 🖥️ Main Task — Kanban Board
