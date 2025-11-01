@@ -4,7 +4,7 @@ import axios from "axios";
 const updateTask = async ({
   body,
   prevColumn,
-  invalidateQueryTriger = false,
+  invalidateQueryTriger = true,
 }: {
   body: {
     id: string;

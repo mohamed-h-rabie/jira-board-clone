@@ -2,111 +2,563 @@
   "tasks": [
     {
       "id": 1,
-      "title": "Design homepage",
-      "description": "Include hero section and responsive layout",
-      "column": "review"
+      "title": "Prepare design system",
+      "description": "Buttons, inputs, modals, and typography rules",
+      "column": "done",
+      "position": 0
     },
     {
       "id": 2,
-      "title": "Set up project structure",
-      "description": "Initialize repository and folder organization",
-      "column": "done"
+      "title": "Connect to API gateway",
+      "description": "Integrate frontend with backend endpoints",
+      "column": "inProgress",
+      "position": -6000
     },
     {
       "id": 3,
-      "title": "Plan database schema",
-      "description": "Define tables, relations, and indexes",
-      "column": "inProgress"
+      "title": "UI/UX consistency check",
+      "description": "Confirm design alignment with style guide",
+      "column": "inProgress",
+      "position": -7000
     },
     {
       "id": 4,
-      "title": "Create color palette",
-      "description": "Establish primary and secondary theme colors",
-      "column": "review"
-    },
-    {
-      "id": 6,
-      "title": "Define API contract",
-      "description": "List all endpoints and expected responses",
-      "column": "backlog"
+      "title": "Add notification system",
+      "description": "Implement toast and push notifications",
+      "column": "inProgress",
+      "position": -2481.5
     },
     {
       "id": 7,
-      "title": "Prepare design system",
-      "description": "Buttons, inputs, modals, and typography rules",
-      "column": "backlog"
+      "title": "Create onboarding flow",
+      "description": "Design screens for new user experience",
+      "column": "inProgress",
+      "position": -16750
+    },
+    {
+      "id": 10,
+      "title": "Add role management",
+      "description": "Implement admin and editor permissions",
+      "column": "backlog",
+      "position": -1499.25
     },
     {
       "id": 12,
-      "title": "Build user dashboard",
-      "description": "Develop UI components for dashboard overview",
-      "column": "backlog"
+      "title": "Integrate SEO tools",
+      "description": "Add meta tags and sitemap generation",
+      "column": "backlog",
+      "position": -2499.25
+    },
+    {
+      "id": 5,
+      "title": "Implement user authentication",
+      "description": "Add login and registration with JWT",
+      "column": "inProgress",
+      "position": -10000
+    },
+    {
+      "id": 8,
+      "title": "Define color palette",
+      "description": "Choose brand and accent colors",
+      "column": "done",
+      "position": 1
     },
     {
       "id": 13,
-      "title": "Connect to API gateway",
-      "description": "Integrate frontend with backend endpoints",
-      "column": "review"
+      "title": "Draft API documentation",
+      "description": "Describe endpoints and data formats",
+      "column": "review",
+      "position": 1
+    },
+    {
+      "id": 14,
+      "title": "Implement theme switcher",
+      "description": "Add light and dark mode support",
+      "column": "inProgress",
+      "position": -11000
+    },
+    {
+      "id": 11,
+      "title": "Design user profile page",
+      "description": "Sketch UI for personal account section",
+      "column": "inProgress",
+      "position": -12000
+    },
+    {
+      "id": 15,
+      "title": "Add search functionality",
+      "description": "Create a global search for content",
+      "column": "inProgress",
+      "position": -9000
+    },
+    {
+      "id": 16,
+      "title": "Plan A/B testing setup",
+      "description": "Determine key metrics and variations",
+      "column": "inProgress",
+      "position": -8000
+    },
+    {
+      "id": 17,
+      "title": "Optimize image assets",
+      "description": "Use next-gen formats and lazy loading",
+      "column": "inProgress",
+      "position": -18750
     },
     {
       "id": 18,
-      "title": "Integrate image uploader",
-      "description": "Support profile and post image uploads",
-      "column": "inProgress"
+      "title": "Define accessibility checklist",
+      "description": "Ensure WCAG 2.1 compliance",
+      "column": "inProgress",
+      "position": -13500
+    },
+    {
+      "id": 19,
+      "title": "Review data privacy policies",
+      "description": "Update for GDPR compliance",
+      "column": "backlog",
+      "position": -3499.25
+    },
+    {
+      "id": 20,
+      "title": "Set up CI/CD pipeline",
+      "description": "Automate build and deploy process",
+      "column": "inProgress",
+      "position": -15750
     },
     {
       "id": 21,
-      "title": "Code review: API endpoints",
-      "description": "Verify and optimize REST API logic",
-      "column": "done"
+      "title": "Design homepage",
+      "description": "Include hero section and responsive layout",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 22,
+      "title": "Plan database schema",
+      "description": "Define tables, relations, and indexes",
+      "column": "inProgress",
+      "position": 1000
+    },
+    {
+      "id": 23,
+      "title": "Create color palette",
+      "description": "Establish primary and secondary theme colors",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 24,
+      "title": "Define API contract",
+      "description": "List all endpoints and expected responses",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 25,
+      "title": "Build user dashboard",
+      "description": "Develop UI components for dashboard overview",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 26,
-      "title": "UI/UX consistency check",
-      "description": "Confirm design alignment with style guide",
-      "column": "inProgress"
+      "title": "Performance profiling",
+      "description": "Analyze render times and memory usage",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 27,
-      "title": "Performance profiling",
-      "description": "Analyze render times and memory usage",
-      "column": "done"
+      "title": "Tag production release",
+      "description": "Mark stable version and create changelog",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 28,
+      "title": "Add filtering system",
+      "description": "Allow users to sort and filter tasks",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 29,
+      "title": "Integrate payment gateway",
+      "description": "Set up Stripe for subscriptions",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 30,
+      "title": "Implement drag-and-drop board",
+      "description": "Enable task movement between columns",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 31,
-      "title": "Fix mobile navigation bug",
-      "description": "Resolve issue with collapsed menu on iOS",
-      "column": "done"
+      "title": "Add comment threads",
+      "description": "Users can discuss under each task",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 32,
-      "title": "Deploy to staging",
-      "description": "Push latest changes for QA verification",
-      "column": "done"
+      "title": "Set up error logging",
+      "description": "Integrate Sentry for frontend issues",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 33,
-      "title": "Finalize landing page design",
-      "description": "Complete hero and features section",
-      "column": "done"
+      "title": "Enhance responsive design",
+      "description": "Ensure mobile and tablet optimization",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 34,
+      "title": "Build task creation modal",
+      "description": "Form with validation and submission",
+      "column": "backlog",
+      "position": 2
+    },
+    {
+      "id": 35,
+      "title": "Integrate chart analytics",
+      "description": "Visualize project progress metrics",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 36,
+      "title": "Implement auto-save feature",
+      "description": "Save drafts automatically every minute",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 37,
-      "title": "Clean up old assets",
-      "description": "Remove unused images and components",
-      "column": "done"
+      "title": "Test dark mode contrast",
+      "description": "Ensure readability in dark theme",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 38,
+      "title": "Add keyboard shortcuts",
+      "description": "Improve productivity with quick actions",
+      "column": "backlog",
+      "position": 2
     },
     {
       "id": 39,
-      "title": "Tag production release",
-      "description": "Mark stable version and create changelog",
-      "column": "backlog"
+      "title": "Add user mentions in comments",
+      "description": "Notify mentioned users via email",
+      "column": "backlog",
+      "position": 1
     },
     {
       "id": 40,
+      "title": "Integrate image uploader",
+      "description": "Support profile and post image uploads",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 41,
+      "title": "Code review: API endpoints",
+      "description": "Verify and optimize REST API logic",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 42,
+      "title": "Fix mobile navigation bug",
+      "description": "Resolve issue with collapsed menu on iOS",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 43,
+      "title": "Review UI animations",
+      "description": "Ensure transitions are smooth and consistent",
+      "column": "backlog",
+      "position": 1
+    },
+    {
+      "id": 9,
+      "title": "Set up analytics tracking",
+      "description": "Integrate Google Analytics and events",
+      "column": "inProgress",
+      "position": 37
+    },
+    {
+      "id": 45,
+      "title": "Check security headers",
+      "description": "Add CSP and XSS protection policies",
+      "column": "inProgress",
+      "position": 38
+    },
+    {
+      "id": 46,
+      "title": "Audit accessibility compliance",
+      "description": "Run tests for screen reader support",
+      "column": "inProgress",
+      "position": 39
+    },
+    {
+      "id": 6,
+      "title": "Plan content strategy",
+      "description": "Define tone and topics for documentation",
+      "column": "review",
+      "position": 0
+    },
+    {
+      "id": 44,
+      "title": "Validate database migrations",
+      "description": "Ensure no data loss during migration",
+      "column": "review",
+      "position": -999
+    },
+    {
+      "id": 47,
+      "title": "Review deployment script",
+      "description": "Confirm correct staging and production flow",
+      "column": "review",
+      "position": 2
+    },
+    {
+      "id": 48,
+      "title": "Inspect API rate limits",
+      "description": "Prevent abuse with throttling middleware",
+      "column": "review",
+      "position": 3
+    },
+    {
+      "id": 49,
+      "title": "Evaluate component reusability",
+      "description": "Refactor repetitive UI blocks",
+      "column": "review",
+      "position": 4
+    },
+    {
+      "id": 50,
+      "title": "Test drag-and-drop UX",
+      "description": "Ensure smooth item repositioning",
+      "column": "review",
+      "position": 5
+    },
+    {
+      "id": 51,
+      "title": "Cross-browser testing",
+      "description": "Verify compatibility with Safari and Edge",
+      "column": "review",
+      "position": 6
+    },
+    {
+      "id": 52,
+      "title": "Check performance metrics",
+      "description": "Run Lighthouse and GTmetrix analysis",
+      "column": "review",
+      "position": 7
+    },
+    {
+      "id": 53,
+      "title": "Validate localization strings",
+      "description": "Ensure correct translations are loaded",
+      "column": "review",
+      "position": 8
+    },
+    {
+      "id": 54,
+      "title": "Review password reset flow",
+      "description": "Ensure token expiry and redirect logic",
+      "column": "review",
+      "position": 9
+    },
+    {
+      "id": 55,
+      "title": "Audit environment variables",
+      "description": "Check for missing or exposed keys",
+      "column": "review",
+      "position": 10
+    },
+    {
+      "id": 56,
+      "title": "Test responsive modals",
+      "description": "Ensure they center correctly on all devices",
+      "column": "review",
+      "position": 11
+    },
+    {
+      "id": 57,
+      "title": "Validate data caching strategy",
+      "description": "Check cache invalidation on updates",
+      "column": "review",
+      "position": 12
+    },
+    {
+      "id": 58,
+      "title": "Verify webhook integrations",
+      "description": "Ensure triggers fire on relevant events",
+      "column": "review",
+      "position": 13
+    },
+    {
+      "id": 59,
+      "title": "Double-check test coverage",
+      "description": "Ensure all major components are covered",
+      "column": "review",
+      "position": 14
+    },
+    {
+      "id": 60,
+      "title": "Run end-to-end tests",
+      "description": "Use Cypress to test full user flow",
+      "column": "review",
+      "position": 15
+    },
+    {
+      "id": 61,
+      "title": "Set up project structure",
+      "description": "Initialize repository and folder organization",
+      "column": "inProgress",
+      "position": -10500
+    },
+    {
+      "id": 62,
+      "title": "Deploy to staging",
+      "description": "Push latest changes for QA verification",
+      "column": "done",
+      "position": 1
+    },
+    {
+      "id": 63,
+      "title": "Finalize landing page design",
+      "description": "Complete hero and features section",
+      "column": "done",
+      "position": 2
+    },
+    {
+      "id": 64,
+      "title": "Clean up old assets",
+      "description": "Remove unused images and components",
+      "column": "done",
+      "position": 3
+    },
+    {
+      "id": 65,
       "title": "Post-deployment testing",
       "description": "Ensure everything runs correctly in production",
-      "column": "done"
+      "column": "done",
+      "position": 4
+    },
+    {
+      "id": 66,
+      "title": "Optimize build size",
+      "description": "Analyze and reduce bundle size",
+      "column": "done",
+      "position": 5
+    },
+    {
+      "id": 67,
+      "title": "Fix broken links",
+      "description": "Run link checker on all pages",
+      "column": "done",
+      "position": 6
+    },
+    {
+      "id": 68,
+      "title": "Write release notes",
+      "description": "Document new features and fixes",
+      "column": "done",
+      "position": 7
+    },
+    {
+      "id": 69,
+      "title": "Archive completed sprints",
+      "description": "Clean up old project milestones",
+      "column": "done",
+      "position": 8
+    },
+    {
+      "id": 70,
+      "title": "Confirm production logging",
+      "description": "Ensure errors are properly logged",
+      "column": "done",
+      "position": 9
+    },
+    {
+      "id": 71,
+      "title": "Refactor old components",
+      "description": "Simplify logic and remove duplicates",
+      "column": "done",
+      "position": 10
+    },
+    {
+      "id": 72,
+      "title": "Implement lazy loading",
+      "description": "Improve initial render performance",
+      "column": "done",
+      "position": 11
+    },
+    {
+      "id": 73,
+      "title": "Conduct usability tests",
+      "description": "Gather feedback from real users",
+      "column": "done",
+      "position": 12
+    },
+    {
+      "id": 74,
+      "title": "Review final documentation",
+      "description": "Ensure API and setup guides are clear",
+      "column": "done",
+      "position": 13
+    },
+    {
+      "id": 75,
+      "title": "Validate analytics reports",
+      "description": "Confirm tracking events fire properly",
+      "column": "done",
+      "position": 14
+    },
+    {
+      "id": 76,
+      "title": "Close project board",
+      "description": "Mark project as completed",
+      "column": "done",
+      "position": 15
+    },
+    {
+      "id": 77,
+      "title": "Deploy production release",
+      "description": "Push final version live",
+      "column": "done",
+      "position": 16
+    },
+    {
+      "id": 78,
+      "title": "Backup production database",
+      "description": "Create full snapshot before deployment",
+      "column": "done",
+      "position": 17
+    },
+    {
+      "id": 79,
+      "title": "Announce release",
+      "description": "Share updates with team and users",
+      "column": "done",
+      "position": 18
+    },
+    {
+      "id": 80,
+      "title": "Retrospective meeting",
+      "description": "Discuss what went well and what to improve",
+      "column": "done",
+      "position": 19
     }
   ]
 }

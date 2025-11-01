@@ -1,27 +1,38 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
+const LIMIT = 10;
 
-export const fetchTasks = async (query: any, pageParam = 0) => {
-  //   if (query === "all") {
-  //     const res = await axios.get(
-  //       `http://localhost:3000/posts?_limit=5&_page=${paginate}`
-  //     );
-  //     return res.data;
-  //   } else {
-  //     console.log(query, "query");
-  //     const res = await axios.get(`http://localhost:3000/posts?status=${query}`);
-  //     return res.data;
-  //   }
-  const res = await axios.get(`http://localhost:4000/tasks?column=${query}`);
-  return res.data;
+export const fetchTasks = async (
+  query: string,
+  pageParam = 1,
+  searchQuery: string
+) => {
+  console.log(searchQuery,'sffffffffffff');
+  
+  const res = await axios.get(
+    // `http://localhost:4000/tasks?q=${searchQuery}&column=${query}&_page=${pageParam}&_limit=${LIMIT}`
+    `http://localhost:4000/tasks?column=${query}&_page=${pageParam}&_limit=${LIMIT}&_sort=position&_order=asc${
+      searchQuery.length > 0 ? `&q=${searchQuery}` : ""
+    }`
+  );
+
+  return {
+    data: res.data,
+    nextPage: pageParam + 1,
+    hasMore: res.data.length > 0, // Adjust based on your API response
+  };
 };
-const useGetTasks = (query: any) => {
-  return useQuery({
-    queryKey: ["tasks", query],
-    queryFn: () => fetchTasks(query),
-    // staleTime: 1000 * 3 * 60,
-    // refetchInterval: 7000,
+
+const useGetTasks = (query: string, searchQuery: string) => {
+  return useInfiniteQuery({
+    queryKey: ["tasks", query ,searchQuery],
+    queryFn: ({ pageParam = 1 }) => fetchTasks(query, pageParam, searchQuery),
+    getNextPageParam: (lastPage) => {
+      // console.log(lastPage, "lastPage");
+
+      return lastPage.hasMore ? lastPage.nextPage : undefined;
+    },
+    initialPageParam: 1,
   });
 };
 

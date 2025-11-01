@@ -16,7 +16,15 @@ interface QuoteItemProps {
   };
   index: number;
 }
-
+const getHeaderColor = (header: string) => {
+  const colors: { [key: string]: string } = {
+    backlog: "#E3F2FD", // Light Blue
+    inProgress: "#FFF3E0", // Light Orange
+    review: "#F3E5F5", // Light Purple
+    done: "#E8F5E9", // Light Green
+  };
+  return colors[header] || "#F5F5F5"; // Default gray
+};
 export default function QuoteItem({ task, index }: QuoteItemProps) {
   const [openUpdateModel, setOpenUpdateModel] = useState(false);
   const [openDeleteModel, setOpenDeleteModel] = useState(false);
@@ -49,9 +57,11 @@ export default function QuoteItem({ task, index }: QuoteItemProps) {
             sx={{
               mb: 1,
               bgcolor: snapshot.isDragging
-                ? "primary.light"
+                ? getHeaderColor(task.column)
                 : "background.paper",
               boxShadow: snapshot.isDragging ? 6 : 1,
+              borderRadius: 3,
+
               // transition: "all 0.2s ease",
             }}
           >

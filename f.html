@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic List (jQuery)</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 8px 14px;
+      background-color: #376b9c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2d5b89;
+    }
+
+    .error {
+      color: red;
+      margin-top: 8px;
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .delete-btn {
+      background-color: #f3f3f3;
+      color: #222;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .delete-btn:hover {
+      background-color: #e4e4e4;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Dynamic List</h2>
+    <div class="input-area">
+      <input type="text" id="item-input" placeholder="Enter a new item">
+      <button id="add-btn">Add Item</button>
+    </div>
+    <p class="error">Please enter an item</p>
+    <ul id="item-list"></ul>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $("#add-btn").click(function() {
+        const itemText = $("#item-input").val().trim();
+
+        if (itemText === "") {
+          $(".error").fadeIn(200);
+          setTimeout(() => $(".error").fadeOut(500), 2000);
+          return;
+        }
+
+        const listItem = $(`
+          <li>
+            <span>${itemText}</span>
+            <button class="delete-btn">Delete</button>
+          </li>
+        `);
+
+        $("#item-list").append(listItem.hide().fadeIn(300));
+        $("#item-input").val("");
+      });
+
+      // Event delegation for dynamically added delete buttons
+      $("#item-list").on("click", ".delete-btn", function() {
+        const item = $(this).closest("li");
+        item.addClass("fade-out");
+        setTimeout(() => item.remove(), 500);
+      });
+    });
+  </script>
+</body>
+</html>
