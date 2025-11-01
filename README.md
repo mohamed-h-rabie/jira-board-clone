@@ -16,7 +16,7 @@ Deployed via Vercel
 
 🔗 Bonus Task: https://jira-clone-delta-kohl.vercel.app/jqueryTask.html
 
-🔗 GitHub Repository: https://github.com/your-username/kanban-dashboard
+🔗 GitHub Repository: https://github.com/mohamed-h-rabie/jira-board-clone
 ---
 ## 🧠 Features
 
